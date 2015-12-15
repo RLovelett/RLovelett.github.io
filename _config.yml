@@ -1,13 +1,57 @@
 # Site settings
 title: Swift Hacking for Fun and Profit
-email: ryan@lovelett.me
-description: > # this means to ignore newlines until "baseurl:"
+locale: en_US
+description: > # this means to ignore newlines until "logo:"
   Guides and musings on working on and with the Swift language. Focus on Linux
   development and C bindings.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://rlovelett.github.io" # the base hostname & protocol for your site
-twitter_username: rlovelett
-github_username:  RLovelett
+logo: site-logo.png
+search: true
+url: https://rlovelett.github.io
 
-# Build settings
-markdown: kramdown
+# Jekyll configuration
+
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..2
+  enable_coderay: false
+
+mathjax: true
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", "vendor"]
+
+
+# Site owner
+owner:
+  name: Ryan Lovelett
+  avatar: bio-photo.jpg
+  email: ryan@lovelett.me
+  disqus-shortname:
+  twitter: rlovelett
+  facebook: #username
+  github: RLovelett
+  stackexchange: http://stackoverflow.com/users/247730/rlovelett?tab=profile
+  linkedin: #username
+  instagram: #username
+  flickr: #username
+  tumblr: #username
+  pinterest: #username
+  weibo: #userid
+  google:
+    plus: #username
+    analytics:
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
